@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: hr
+    database: DBT
+    schema: HR
+    description: " Its HR schema "
+
+    tables:
+      - name: employees1
