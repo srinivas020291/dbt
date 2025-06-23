@@ -3,8 +3,17 @@ version: 2
 sources:
   - name: hr
     database: DBT
-    schema: HR
-    description: " Its HR schema "
-
-    tables:
+    schema: hr
+    tables: 
       - name: employees1
+        loaded_at_field: load_time
+        freshness: 
+          warn_after: {count: 12, period: hour}
+          error_after: { count: 24, period: hour}
+  - name: sse_dm_mkt_prd_dm
+    database: DBT
+    schema: sse_dm_mkt_prd_dm
+    tables: 
+      - name: MDW_CAMPAIGNS
+        description: "Marketing campaigns"
+          
