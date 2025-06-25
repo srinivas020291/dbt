@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: stg_employees
+    columns:
+      - name: employee_id
+        tests:
+          - not_null
+          - unique
+
+
+      - name: first_name
+        tests:
+          - not_null
+  - name: stg_emp
+    columns:
+      - name: employee_id
+        tests:
+          - not_null
+          
+      - name: department_id
+        tests:
+          - relationships:
+              to: ref('stg_dept')
+              field: department_id    
+
+  - name: stg_employees1
+    columns:
+      - name: EMPLOYEE_ID
+        tests:
+          - not_null
+          - unique
+      - name:  FIRST_NAME
+        tests:
+          - not_null   
+      - name: DEPARTMENT_ID
+        tests:
+          - accepted_values:
+             values: ['10','20','30','40','50','60','70','80','90','100','110']
+             config:
+              severity: warn
+  - name: dim_employees1
+    columns:
+      - name: employee_id
+        tests:
+          - not_null
+      
+      - name: department_id
+        tests:
+          - validate_department_ids:
+             config:
+              severity: error
+               
+
+        
+          

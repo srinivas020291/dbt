@@ -1,0 +1,6 @@
+employee_id,first_name,last_name,email,hire_date,job_id,salary,department_id
+101,John,Doe,john.doe@example.com,2020-01-15,IT_PROG,75000,10
+102,Jane,Smith,jane.smith@example.com,2019-03-22,HR_REP,68000,20
+103,Michael,Brown,michael.brown@example.com,2021-07-01,SA_MAN,92000,30
+104,Linda,Johnson,linda.johnson@example.com,2018-11-12,AD_ASST,48000,40
+105,Robert,Williams,robert.williams@example.com,2022-02-18,FI_MGR,105000,50

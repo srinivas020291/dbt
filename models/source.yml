@@ -16,4 +16,20 @@ sources:
     tables: 
       - name: MDW_CAMPAIGNS
         description: "Marketing campaigns"
+        
+  - name: EMP
+    database: DBT
+    schema: EMP
+    tables:
+      - name: employees
+        loaded_at_field: load_time
+        freshness: 
+          error_after:
+            count: 2
+            period: day
+          warn_after:
+            count: 1
+            period: day
+        
+      - name: department
           
