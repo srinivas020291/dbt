@@ -19,7 +19,7 @@ sources:
         
   - name: EMP
     database: DBT
-    schema: EMP
+    schema: emp
     tables:
       - name: employees
         loaded_at_field: load_time
@@ -32,4 +32,4 @@ sources:
             period: day
         
       - name: department
-          
+      - name: employees1   
