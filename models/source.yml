@@ -1,0 +1,21 @@
+version: 2
+
+
+sources:
+    - name: hr
+      database: source1
+      schema: hr
+      tables:
+        - name: employees
+          columns:
+            - name: employee_id
+              tests:
+                - not_null
+                - unique
+        - name: departments
+        - name: countries
+        - name: jobs
+        - name: job_history
+        - name: locations
+        - name: regions
+        - name: salary
