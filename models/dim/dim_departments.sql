@@ -3,7 +3,7 @@
         materialized='incremental',
         unique_key='department_id',
         incremental_strategy='delete_insert',
-        tags=['DIM']
+        tags=['dim']
     )
 }}
 

@@ -3,8 +3,7 @@
         materialized='incremental',
         unique_key='employee_id',
         incremental_strategy='delete+insert',
-        schema ='DIM',
-        Tags=['dim']
+        tags=['dim']
     )
 }}
 
