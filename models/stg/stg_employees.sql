@@ -16,6 +16,7 @@ select
     salary,
     commission_pct,
     manager_id,
-    department_id
+    department_id,
+    current_timestamp as load_time
 from {{ source('hr','employees') }}
 where employee_id is NOT NULL
