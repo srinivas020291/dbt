@@ -14,8 +14,6 @@ select
     hire_date,
     job_id,
     salary,
-    commission_pct,
-    manager_id,
     department_id,
     current_timestamp as load_time
 from {{ source('hr','employees') }}
