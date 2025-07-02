@@ -41,3 +41,5 @@ models:
       +schema: stg
     dim:
       +schema: dim
+    fct: 
+      +schema: fct
